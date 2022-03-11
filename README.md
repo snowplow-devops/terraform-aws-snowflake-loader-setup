@@ -151,9 +151,19 @@ AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or im
 language governing permissions and limitations under the License.
 
 [snowflake-service-user-tutorial]: https://quickstarts.snowflake.com/guide/terraforming_snowflake/index.html?index=..%2F..index#2
-
 [snowflake-env-vars]: https://quickstarts.snowflake.com/guide/terraforming_snowflake/index.html?index=..%2F..index#3
 
-[license]: https://www.apache.org/licenses/LICENSE-2.0
+[release]: https://github.com/snowplow-devops/terraform-aws-snowflake-loader-setup/releases/latest
+[release-image]: https://img.shields.io/github/v/release/snowplow-devops/terraform-aws-snowflake-loader-setup
 
+[ci]: https://github.com/snowplow-devops/terraform-aws-snowflake-loader-setup/actions?query=workflow%3Aci
+[ci-image]: https://github.com/snowplow-devops/terraform-aws-snowflake-loader-setup/workflows/ci/badge.svg
+
+[license]: https://www.apache.org/licenses/LICENSE-2.0
 [license-image]: https://img.shields.io/badge/license-Apache--2-blue.svg?style=flat
+
+[registry]: https://registry.terraform.io/modules/snowplow-devops/aws-snowflake-loader-setup/PROVIDER/latest
+[registry-image]: https://img.shields.io/static/v1?label=Terraform&message=Registry&color=7B42BC&logo=terraform
+
+[source]: https://github.com/snowplow/snowplow
+[source-image]: https://img.s
