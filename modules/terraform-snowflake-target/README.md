@@ -1,6 +1,6 @@
 [![Release][release-image]][release] [![CI][ci-image]][ci] [![License][license-image]][license] [![Registry][registry-image]][registry] [![Source][source-image]][source]
 
-# terraform-aws-snowflake-loader-setup
+# terraform-snowflake-target
 
 A Terraform module for preparing Snowflake destination for loading Snowplow data.
 
@@ -108,6 +108,17 @@ language governing permissions and limitations under the License.
 
 [snowflake-env-vars]: https://quickstarts.snowflake.com/guide/terraforming_snowflake/index.html?index=..%2F..index#3
 
-[license]: https://www.apache.org/licenses/LICENSE-2.0
+[release]: https://github.com/snowplow-devops/terraform-snowflake-target/releases/latest
+[release-image]: https://img.shields.io/github/v/release/snowplow-devops/terraform-snowflake-target
 
+[ci]: https://github.com/snowplow-devops/terraform-snowflake-target/actions?query=workflow%3Aci
+[ci-image]: https://github.com/snowplow-devops/terraform-snowflake-target/workflows/ci/badge.svg
+
+[license]: https://www.apache.org/licenses/LICENSE-2.0
 [license-image]: https://img.shields.io/badge/license-Apache--2-blue.svg?style=flat
+
+[registry]: https://registry.terraform.io/modules/snowplow-devops/snowflake-target/PROVIDER/latest
+[registry-image]: https://img.shields.io/static/v1?label=Terraform&message=Registry&color=7B42BC&logo=terraform
+
+[source]: https://github.com/snowplow/snowplow
+[source-image]: https://img.shields.io/static/v1?label=Snowplow&message=snowflake-target&color=0E9BA4&logo=GitHub
