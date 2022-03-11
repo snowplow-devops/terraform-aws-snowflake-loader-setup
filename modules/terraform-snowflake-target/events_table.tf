@@ -1,11 +1,11 @@
 resource "snowflake_table" "events" {
-  database = var.is_create_database ? snowflake_database.loader[0].name : local.db_name
+  database = local.database
   schema   = snowflake_schema.atomic.name
   name     = "EVENTS"
 
   lifecycle {
     ignore_changes  = [column]
-    prevent_destroy = true
+    prevent_destroy = false
   }
 
   column {
