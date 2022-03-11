@@ -162,8 +162,8 @@ language governing permissions and limitations under the License.
 [license]: https://www.apache.org/licenses/LICENSE-2.0
 [license-image]: https://img.shields.io/badge/license-Apache--2-blue.svg?style=flat
 
-[registry]: https://registry.terraform.io/modules/snowplow-devops/aws-snowflake-loader-setup/PROVIDER/latest
+[registry]: https://registry.terraform.io/modules/snowplow-devops/terraform-aws-snowflake-loader-setup/PROVIDER/latest
 [registry-image]: https://img.shields.io/static/v1?label=Terraform&message=Registry&color=7B42BC&logo=terraform
 
 [source]: https://github.com/snowplow/snowplow
-[source-image]: https://img.s
+[source-image]: https://img.shields.io/static/v1?label=Snowplow&message=terraform-aws-snowflake-loader-setup&color=0E9BA4&logo=GitHub
