@@ -1,6 +1,4 @@
 locals {
-  module_name                  = "snowplow-snowflake-resources"
-  module_version               = "0.1.0"
   wh_name                      = var.override_snowflake_wh_name != "" ? var.override_snowflake_wh_name : "${upper(var.name)}_WAREHOUSE"
   snowflake_loader_user        = var.override_snowflake_loader_user != "" ? var.override_snowflake_loader_user : "${upper(var.name)}_LOADER_USER"
   snowflake_loader_role        = var.override_snowflake_loader_role != "" ? var.override_snowflake_loader_role : "${upper(var.name)}_LOADER_ROLE"
