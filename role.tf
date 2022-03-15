@@ -3,7 +3,7 @@ resource "snowflake_role" "loader" {
 }
 
 resource "snowflake_warehouse_grant" "loader" {
-  for_each          = toset(["MODIFY", "MONITOR", "USAGE", "OPERATE"])
+  for_each          = toset(["MONITOR", "USAGE", "OPERATE"])
   warehouse_name    = snowflake_warehouse.loader.name
   privilege         = each.key
   roles             = [snowflake_role.loader.name]
@@ -53,7 +53,7 @@ resource "snowflake_stage_grant" "folder_monitoring" {
 }
 
 resource "snowflake_schema_grant" "loader" {
-  for_each = toset([
+  for_each          = toset([
     "CREATE TABLE",
     "CREATE TEMPORARY TABLE",
     "MODIFY",
@@ -67,7 +67,7 @@ resource "snowflake_schema_grant" "loader" {
 }
 
 resource "snowflake_table_grant" "loader" {
-  for_each = toset([
+  for_each          = toset([
     "INSERT",
     "OWNERSHIP",
     "SELECT"
