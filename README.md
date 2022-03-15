@@ -6,8 +6,7 @@ A Terraform module for preparing snowflake for loading snowplow data. Should be 
 
 ## Prerequisites
 
-Authentication for the service user is required for the snowflake terraform provider
-[follow this tutorial][snowflake-service-user-tutorial] to obtain snowflake connection details:
+Authentication for the service user is required for the snowflake terraform provider - [follow this tutorial][snowflake-service-user-tutorial] to obtain snowflake connection details:
 
 | Parameter | Description |
 |------|---------|
@@ -21,7 +20,7 @@ Authentication for the service user is required for the snowflake terraform prov
 
 ### Applying module directly
 
-1. Fill variables in [terraform.tmpl.tfvars](terraform.tmpl.tfvars) and copy it to `terraform.tfvars`.
+1. Fill variables in [terraform.tfvars.tmpl](terraform.tfvars.tmpl) and copy it to `terraform.tfvars`.
 2. Using environment variables for authentication as [described in here][snowflake-env-vars]. Fill the template
    in [snowflake_provider_vars.sh](snowflake_provider_vars.sh) and run
    `source ./snowflake_provider_vars.sh` to set up your local environment.
@@ -41,26 +40,24 @@ provider "snowflake" {
   private_key_path = "/path/to/private/key"
 }
 
-
 module "snowflake_target" {
-   source = "snowplow-devops/terraform-snowflake-target"
+   source = "snowplow-devops/target/snowflake"
    
-   name                           = "snowplow"
-   snowflake_password             = "example_password"
+   name               = "snowplow"
+   snowflake_password = "example_password"
 }
 
-
 module "snowflake_setup" {
-   source = "snowplow-devops/terraform-aws-snowflake-loader-setup"
+   source = "snowplow-devops/snowflake-loader-setup/aws"
 
-   name                           = "snowplow"
-   stage_bucket                   = "snowplow-oss-bucket"
-   aws_account_id                 = "0000000000"
-   snowflake_database             = module.snowflake_target.snowflake_database
-   snowflake_event_table          = module.snowflake_target.snowflake_event_table
-   snowflake_file_format          = module.snowflake_target.snowflake_file_format
-   snowflake_schema               = module.snowflake_target.snowflake_schema
-   snowflake_user                 = module.snowflake_target.snowflake_user
+   name                  = "snowplow"
+   stage_bucket          = "snowplow-oss-bucket"
+   aws_account_id        = "0000000000"
+   snowflake_database    = module.snowflake_target.snowflake_database
+   snowflake_event_table = module.snowflake_target.snowflake_event_table
+   snowflake_file_format = module.snowflake_target.snowflake_file_format
+   snowflake_schema      = module.snowflake_target.snowflake_schema
+   snowflake_user        = module.snowflake_target.snowflake_user
 }
 ```
 
@@ -114,7 +111,7 @@ No modules.
 | <a name="input_stage_bucket"></a> [stage\_bucket](#input\_stage\_bucket) | Name of the S3 bucket which will be used as stage by Snowflake | `string` | n/a | yes |
 | <a name="input_folder_monitoring_enabled"></a> [folder\_monitoring\_enabled](#input\_folder\_monitoring\_enabled) | Folder monitoring loading | `bool` | `false` | no |
 | <a name="input_override_folder_monitoring_stage_url"></a> [override\_folder\_monitoring\_stage\_url](#input\_override\_folder\_monitoring\_stage\_url) | Override monitoring stage url, if not set it will be defaulted "s3://${var.stage\_bucket\_name}/${var.name}/shredded/v1" | `string` | `""` | no |
-| <a name="input_override_iam_loader_role_name"></a> [override\_iam\_loader\_role\_name](#input\_override\_iam\_loader\_role\_name) | Override transformed stage url, if not set it will be var.name with -snowflakedb-load-role suffix | `string` | `""` | no |
+| <a name="input_override_iam_loader_role_name"></a> [override\_iam\_loader\_role\_name](#input\_override\_iam\_loader\_role\_name) | Override integration iam role name, if not set it will be var.name with -snowflakedb-load-role suffix | `string` | `""` | no |
 | <a name="input_override_snowflake_loader_role"></a> [override\_snowflake\_loader\_role](#input\_override\_snowflake\_loader\_role) | Override loader role name in snowflake, if not set it will be uppercase var.name with "\_LOADER\_ROLE" suffix | `string` | `""` | no |
 | <a name="input_override_snowflake_loader_user"></a> [override\_snowflake\_loader\_user](#input\_override\_snowflake\_loader\_user) | Override loader user name in snowflake, if not set it will be uppercase var.name with \_LOADER\_USER suffix | `string` | `""` | no |
 | <a name="input_override_snowflake_wh_name"></a> [override\_snowflake\_wh\_name](#input\_override\_snowflake\_wh\_name) | Override warehouse name, if not set it will be defaulted to uppercase var.name with "\_WAREHOUSE" suffix | `string` | `""` | no |
@@ -143,12 +140,14 @@ No modules.
 
 The Terraform Snowflake Loader Setup project is Copyright 2022-2022 Snowplow Analytics Ltd.
 
-Licensed under the [Apache License, Version 2.0][license] (the "License"); you may not use this software except in
-compliance with the License.
+Licensed under the [Apache License, Version 2.0][license] (the "License");
+you may not use this software except in compliance with the License.
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "
-AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific
-language governing permissions and limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 [snowflake-service-user-tutorial]: https://quickstarts.snowflake.com/guide/terraforming_snowflake/index.html?index=..%2F..index#2
 [snowflake-env-vars]: https://quickstarts.snowflake.com/guide/terraforming_snowflake/index.html?index=..%2F..index#3
@@ -162,7 +161,7 @@ language governing permissions and limitations under the License.
 [license]: https://www.apache.org/licenses/LICENSE-2.0
 [license-image]: https://img.shields.io/badge/license-Apache--2-blue.svg?style=flat
 
-[registry]: https://registry.terraform.io/modules/snowplow-devops/terraform-aws-snowflake-loader-setup/PROVIDER/latest
+[registry]: https://registry.terraform.io/modules/snowplow-devops/snowflake-loader-setup/aws/latest
 [registry-image]: https://img.shields.io/static/v1?label=Terraform&message=Registry&color=7B42BC&logo=terraform
 
 [source]: https://github.com/snowplow/snowplow

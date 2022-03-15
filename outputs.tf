@@ -52,4 +52,3 @@ output "aws_iam_storage_integration_role_name" {
   description = "AWS storage integration IAM role name"
   value       = local.snowflake_iam_load_role_name
 }
-
