@@ -64,13 +64,13 @@ module "snowflake_setup" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_snowflake"></a> [snowflake](#requirement\_snowflake) | 0.25.32 |
+| <a name="requirement_snowflake"></a> [snowflake](#requirement\_snowflake) | 0.45.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_snowflake"></a> [snowflake](#provider\_snowflake) | 0.25.32 |
+| <a name="provider_snowflake"></a> [snowflake](#provider\_snowflake) | 0.45.0 |
 
 ## Modules
 
@@ -80,20 +80,20 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [snowflake_database_grant.loader](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/database_grant) | resource |
-| [snowflake_file_format_grant.loader](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/file_format_grant) | resource |
-| [snowflake_integration_grant.loader](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/integration_grant) | resource |
-| [snowflake_role.loader](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/role) | resource |
-| [snowflake_role_grants.loader](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/role_grants) | resource |
-| [snowflake_schema_grant.loader](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/schema_grant) | resource |
-| [snowflake_stage.folder_monitoring](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/stage) | resource |
-| [snowflake_stage.transformed](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/stage) | resource |
-| [snowflake_stage_grant.folder_monitoring](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/stage_grant) | resource |
-| [snowflake_stage_grant.transformed](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/stage_grant) | resource |
-| [snowflake_storage_integration.integration](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/storage_integration) | resource |
-| [snowflake_table_grant.loader](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/table_grant) | resource |
-| [snowflake_warehouse.loader](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/warehouse) | resource |
-| [snowflake_warehouse_grant.loader](https://registry.terraform.io/providers/chanzuckerberg/snowflake/0.25.32/docs/resources/warehouse_grant) | resource |
+| [snowflake_database_grant.loader](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/database_grant) | resource |
+| [snowflake_file_format_grant.loader](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/file_format_grant) | resource |
+| [snowflake_integration_grant.loader](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/integration_grant) | resource |
+| [snowflake_role.loader](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/role) | resource |
+| [snowflake_role_grants.loader](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/role_grants) | resource |
+| [snowflake_schema_grant.loader](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/schema_grant) | resource |
+| [snowflake_stage.folder_monitoring](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/stage) | resource |
+| [snowflake_stage.transformed](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/stage) | resource |
+| [snowflake_stage_grant.folder_monitoring](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/stage_grant) | resource |
+| [snowflake_stage_grant.transformed](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/stage_grant) | resource |
+| [snowflake_storage_integration.integration](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/storage_integration) | resource |
+| [snowflake_table_grant.loader](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/table_grant) | resource |
+| [snowflake_warehouse.loader](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/warehouse) | resource |
+| [snowflake_warehouse_grant.loader](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/0.45.0/docs/resources/warehouse_grant) | resource |
 
 ## Inputs
 
