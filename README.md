@@ -4,6 +4,12 @@
 
 A Terraform module for preparing snowflake for loading snowplow data. Should be used after the `terraform-snowflake-target`.
 
+## Deprecation notice
+
+**This module is now deprecated.**
+
+To configure the Snowflake Loader on AWS please follow the [guide here](https://docs.snowplow.io/docs/getting-started-on-snowplow-open-source/quick-start-aws).
+
 ## Prerequisites
 
 Authentication for the service user is required for the snowflake terraform provider - [follow this tutorial][snowflake-service-user-tutorial] to obtain snowflake connection details:
